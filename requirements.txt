@@ -1,0 +1,14 @@
+streamlit
+pyngrok
+langchain
+langchain-core
+langchain-community
+langchain-huggingface
+langchain-text-splitters
+transformers
+accelerate
+bitsandbytes
+faiss-cpu
+sentence-transformers
+pydantic
+python-dotenv
