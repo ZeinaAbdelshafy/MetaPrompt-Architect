@@ -47,9 +47,9 @@ MetaPrompt Architect is an AI-powered tool designed to transform vague user requ
 Guide for running in Google Colab.
 1. upload all files in Colab
 2. Install dependencies:
-   ```python
-   !pip install -r requirements.txt
-   ```
+```python
+!pip install -r requirements.txt
+```
 3.Create a .env file with your ngrok token:
 ```python
 with open(".env", "w") as f:
@@ -77,10 +77,9 @@ print(f"App is live at: {public_url}")
 
 # 🚀 Usage
 
-1. Run the Streamlit application in headless mode: streamlit run app.py --server.port 8501 --server.headless true
-2. In a separate terminal, start the ngrok tunnel to expose the local server: ngrok http 8501
-3. Open the generated ngrok URL in your web browser.
-4. Enter a vague request into the input field. If the system identifies missing context, it will prompt you with specific questions. Answer them to generate the final optimized prompt.
+1. Open the generated ngrok URL in your web browser.
+2. Enter a vague request into the input field, and press analyze.
+3. If the system identifies missing context, it will prompt you with specific questions. Answer them to generate the final optimized prompt.
 
 ---
 
