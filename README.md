@@ -47,20 +47,20 @@ MetaPrompt Architect is an AI-powered tool designed to transform vague user requ
 Guide for running in Google Colab.
 1. upload all files in Colab
 2. Install dependencies:
-   '''python
+   ```python
    !pip install -r requirements.txt
-   ''' 
+   ```
 3.Create a .env file with your ngrok token:
-'''python
+```python
 with open(".env", "w") as f:
    f.write("NGROK_AUTH_TOKEN=your_ngrok_token_here")
-'''
+```
 5. Start the Streamlit server in the background:
-'''python
+```python
     !streamlit run app.py --server.port 8501 --server.headless true &
-'''
+```
 7. create ngrok tunnel in new cell
-'''python
+```python
 import os, time
 from pyngrok import ngrok
 from dotenv import load_dotenv
@@ -70,7 +70,8 @@ ngrok.set_auth_token(os.getenv("NGROK_AUTH_TOKEN"))
 time.sleep(5)
    
 public_url = ngrok.connect(8501)
-print(f"App is live at: {public_url}")'''
+print(f"App is live at: {public_url}")
+```
 
 ---
 
