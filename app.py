@@ -29,7 +29,7 @@ class OptimizedPromptOutput(BaseModel):
     output_format: str
 
 # ==========================================
-# 2. INITIALIZATION & RAG INGESTION (CACHED)
+# 2. INITIALIZATION & RAG INGESTION
 # ==========================================
 @st.cache_resource
 def initialize_system():
@@ -126,13 +126,13 @@ Gold Standard Prompt: "Act as a Startup Founder with a track record of successfu
     return chat_model, retriever
 
 # ==========================================
-# 3. PROMPTS & PARSERS (REDESIGNED GAP ANALYSIS)
+# 3. PROMPTS & PARSERS 
 # ==========================================
 gap_parser = JsonOutputParser(pydantic_object=GapAnalysisOutput)
 architect_parser = JsonOutputParser(pydantic_object=OptimizedPromptOutput)
 refiner_parser = JsonOutputParser(pydantic_object=OptimizedPromptOutput)
 
-# COMPLETELY REDESIGNED GAP ANALYSIS PROMPT
+
 gap_prompt = ChatPromptTemplate.from_messages([
     ("system", """You are an expert Prompt Analyst. Your job is to analyze vague user requests and determine what specific information is missing.
 
